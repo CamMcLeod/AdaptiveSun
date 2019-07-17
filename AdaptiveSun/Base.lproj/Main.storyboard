@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -18,35 +18,79 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="2Wx-KA-cAz">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
-                            <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uD6-Tp-1g5">
-                                <rect key="frame" x="0.0" y="333.5" width="375" height="333.5"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uD6-Tp-1g5">
+                                <rect key="frame" x="0.0" y="368" width="414" height="368"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="cK2-x3-iF7">
-                                        <rect key="frame" x="8" y="0.0" width="359" height="167"/>
+                                        <rect key="frame" x="8" y="0.0" width="398" height="184"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="400"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
+                                        <color key="textColor" red="0.97595685720000003" green="0.84628051520000003" blue="0.4744032621" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="highlightedColor" red="0.85833281279999996" green="0.72456973790000001" blue="0.3488991857" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="shadowColor" cyan="0.015453606843948364" magenta="0.128912553191185" yellow="0.65051758289337158" black="0.22134640726034302" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                        <size key="shadowOffset" width="3" height="4"/>
                                     </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fhN-ih-VxQ" userLabel="Button Container">
+                                        <rect key="frame" x="0.0" y="184" width="414" height="184"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Epv-qz-zAe" userLabel="Play Button">
+                                                <rect key="frame" x="143" y="28" width="128" height="128"/>
+                                                <state key="normal" backgroundImage="Play 2"/>
+                                                <state key="selected" backgroundImage="Play.press 2"/>
+                                                <state key="highlighted" backgroundImage="Play.press 2"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ps7-sj-Cuw" userLabel="Forward Button">
+                                                <rect key="frame" x="278" y="28" width="128" height="128"/>
+                                                <state key="normal" backgroundImage="Next 2"/>
+                                                <state key="selected" backgroundImage="Next.press 2"/>
+                                                <state key="highlighted" backgroundImage="Next.press 2"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Vd-wI-lfZ" userLabel="Backward Button">
+                                                <rect key="frame" x="8" y="28" width="128" height="128"/>
+                                                <state key="normal" backgroundImage="Previous 2"/>
+                                                <state key="selected" backgroundImage="Previous.press 2"/>
+                                                <state key="highlighted" backgroundImage="Previous.press 2"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="Ps7-sj-Cuw" firstAttribute="height" secondItem="7Vd-wI-lfZ" secondAttribute="height" id="9yu-D3-U6S"/>
+                                            <constraint firstItem="Epv-qz-zAe" firstAttribute="centerX" secondItem="fhN-ih-VxQ" secondAttribute="centerX" id="Mj0-d2-liZ"/>
+                                            <constraint firstItem="Epv-qz-zAe" firstAttribute="centerY" secondItem="fhN-ih-VxQ" secondAttribute="centerY" id="P4w-8F-a1r"/>
+                                            <constraint firstItem="Epv-qz-zAe" firstAttribute="width" secondItem="7Vd-wI-lfZ" secondAttribute="width" id="Q0c-jL-7hS"/>
+                                            <constraint firstItem="7Vd-wI-lfZ" firstAttribute="leading" secondItem="fhN-ih-VxQ" secondAttribute="leading" constant="8" id="Sve-Mn-9el"/>
+                                            <constraint firstItem="7Vd-wI-lfZ" firstAttribute="centerY" secondItem="fhN-ih-VxQ" secondAttribute="centerY" id="UGY-T7-SWw"/>
+                                            <constraint firstItem="Ps7-sj-Cuw" firstAttribute="width" secondItem="7Vd-wI-lfZ" secondAttribute="width" id="gTc-xK-662"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ps7-sj-Cuw" secondAttribute="trailing" constant="8" id="nsI-sO-Nf0"/>
+                                            <constraint firstItem="Ps7-sj-Cuw" firstAttribute="centerY" secondItem="fhN-ih-VxQ" secondAttribute="centerY" id="oGB-Dy-gQv"/>
+                                            <constraint firstItem="Epv-qz-zAe" firstAttribute="height" secondItem="7Vd-wI-lfZ" secondAttribute="height" id="rKu-r1-KsK"/>
+                                            <constraint firstItem="7Vd-wI-lfZ" firstAttribute="width" secondItem="fhN-ih-VxQ" secondAttribute="height" constant="-56" id="rwr-rx-u4V"/>
+                                            <constraint firstItem="7Vd-wI-lfZ" firstAttribute="height" secondItem="fhN-ih-VxQ" secondAttribute="height" constant="-56" id="t1N-P3-YsT"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="cK2-x3-iF7" secondAttribute="trailing" constant="8" id="4Kj-kD-zW2"/>
                                     <constraint firstItem="cK2-x3-iF7" firstAttribute="leading" secondItem="uD6-Tp-1g5" secondAttribute="leading" constant="8" id="9lM-Yg-7tD"/>
                                     <constraint firstItem="cK2-x3-iF7" firstAttribute="height" secondItem="uD6-Tp-1g5" secondAttribute="height" multiplier="0.5" id="DTr-cI-fX6"/>
+                                    <constraint firstAttribute="bottom" secondItem="fhN-ih-VxQ" secondAttribute="bottom" id="H0c-6o-5lR"/>
+                                    <constraint firstAttribute="trailing" secondItem="fhN-ih-VxQ" secondAttribute="trailing" id="aAe-7z-MbW"/>
+                                    <constraint firstItem="fhN-ih-VxQ" firstAttribute="height" secondItem="uD6-Tp-1g5" secondAttribute="height" multiplier="0.5" id="f5K-F4-po6"/>
                                     <constraint firstItem="cK2-x3-iF7" firstAttribute="top" secondItem="uD6-Tp-1g5" secondAttribute="top" id="i6d-z0-lzD"/>
+                                    <constraint firstItem="fhN-ih-VxQ" firstAttribute="leading" secondItem="uD6-Tp-1g5" secondAttribute="leading" id="yG9-Tg-L7O"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VCX-xt-Al7">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="333.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="368"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sun" translatesAutoresizingMaskIntoConstraints="NO" id="k4a-XS-g1e">
-                                        <rect key="frame" x="56.5" y="50" width="262.5" height="233.5"/>
+                                        <rect key="frame" x="62" y="55.333333333333343" width="290" height="257.33333333333326"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -77,10 +121,16 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="113.83928571428571"/>
+            <point key="canvasLocation" x="136.80000000000001" y="113.79310344827587"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Next 2" width="112" height="112"/>
+        <image name="Next.press 2" width="112" height="112"/>
+        <image name="Play 2" width="112" height="112"/>
+        <image name="Play.press 2" width="112" height="112"/>
+        <image name="Previous 2" width="112" height="112"/>
+        <image name="Previous.press 2" width="112" height="112"/>
         <image name="Sun" width="518" height="505"/>
         <image name="background" width="1280" height="480"/>
     </resources>
